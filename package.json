@@ -18,8 +18,7 @@
     "deploy:prod": "vercel --prod",
     "deploy:preview": "vercel --no-prod",
     "vercel:build": "pnpm run build",
-    "vercel:dev": "vite",
-    "env:pull": "vercel env pull"
+    "vercel:dev": "vite"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

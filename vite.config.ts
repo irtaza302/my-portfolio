@@ -4,7 +4,6 @@ import { defineConfig } from "vite"
 
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
-  const isVercel = process.env.VERCEL === '1'
   
   return {
   plugins: [react()],
@@ -154,14 +153,8 @@ export default defineConfig(({ mode }) => {
     legalComments: 'none',
   },
   
-  // Vercel-specific optimizations
-  define: isVercel ? {
-    __VERCEL_ENV__: JSON.stringify(process.env.VERCEL_ENV || 'development'),
-    __VERCEL_URL__: JSON.stringify(process.env.VERCEL_URL || 'localhost'),
-  } : {},
-  
-  // Environment-specific base URL
-  base: isVercel && isProduction ? '/' : '/',
+  // Clean base URL configuration
+  base: '/',
   
   // Preview server configuration for Vercel
   preview: {
