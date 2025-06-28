@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
         >
           <span className="text-white">Hi, I'm </span>
-          <span className="text-blue-400">Alex Johnson</span>
+          <span className="text-blue-400">Irtaza Malik</span>
         </motion.h1>
 
         {/* Typing Animation */}
