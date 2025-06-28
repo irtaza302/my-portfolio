@@ -147,10 +147,10 @@ export default defineConfig(({ mode }) => {
   // Enable esbuild optimizations
   esbuild: {
     // Remove console logs and debugger in production
-    drop: ['console', 'debugger'],
+    drop: isProduction ? ['console', 'debugger'] : [],
     
     // Optimize for smaller bundle size
-    legalComments: 'none',
+    legalComments: isProduction ? 'none' : 'inline',
   },
   
   // Clean base URL configuration
